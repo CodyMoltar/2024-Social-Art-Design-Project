@@ -77,7 +77,7 @@ def braille_to_svg(text):
     if '!' in filename:
         filename = filename.replace('!', '')
 
-    if ('?' in filename):
+    if '?' in filename:
         filename = filename.replace('?', '')    
 
     dwg = svgwrite.Drawing(filename + '.svg', profile='full')
