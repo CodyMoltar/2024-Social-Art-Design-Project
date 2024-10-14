@@ -72,8 +72,15 @@ def braille_to_svg(text):
     filename: The name of the SVG file to generate.
     """
 
+    filename = text
 
-    dwg = svgwrite.Drawing(text + '.svg', profile='full')
+    if '!' in filename:
+        filename = filename.replace('!', '')
+
+    if ('?' in filename):
+        filename = filename.replace('?', '')    
+
+    dwg = svgwrite.Drawing(filename + '.svg', profile='full')
     multiplier = 10
     cell_size = 1.6 * multiplier
     cell_spacing = 2.5 * multiplier
@@ -113,11 +120,7 @@ def braille_to_svg(text):
     # check if the text includes a ? or !
     # if it does, remove them from the string
 
-    if '!' in text:
-        text = text.replace('!', '')
-
-    if ('?' in text):
-        text = text.replace('?', '')
+   
 
     dwg.save()
 
