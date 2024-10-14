@@ -5,7 +5,29 @@ The character set is Latvian.
 
 1. Clone or download this repository
 2. Open a shell (terminal, command prompt, powershell) in the directory of the repository
-3. Install the nesserary python package, by running this command:
+3. Check if python is installed, by running this command:
+
+    **Windows:**
+
+    ```sh
+    python
+    ```
+
+    **MacOS:**
+
+    ```sh
+    python
+    ```
+
+    You should see something like:
+
+    ```sh
+    python 3.10.4
+    ```
+
+    If you don't, download python from their website: [Python](https://www.python.org)
+
+4. Install the nesserary python package, by running this command:
 
     **Windows:**
 
@@ -19,7 +41,7 @@ The character set is Latvian.
     pip3 install svgwrite
     ```
 
-4. Now run the script: (replace the text within the quotes):
+5. Now run the script: (replace the text within the quotes):
 
     **Windows:**
 
