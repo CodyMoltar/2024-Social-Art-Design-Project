@@ -110,6 +110,15 @@ def braille_to_svg(text):
                 cx = x_offset + (int(dot) > 3) * cell_spacing + (i * letter_spacing)
                 dwg.add(dwg.circle(center=(cx, cy), r=cell_size/2, fill='black'))
 
+    # check if the text includes a ? or !
+    # if it does, remove them from the string
+
+    if '!' in text:
+        text = text.replace('!', '')
+
+    if ('?' in text):
+        text = text.replace('?', '')
+
     dwg.save()
 
 braille_to_svg(TEXT_TO_CONVERT) 
