@@ -40,9 +40,27 @@ map = {
     "u": 34,
     "ū": 346,
     "v": 2456,
+    "w": 2456,
     "z": 345,
     "ž": 3456,
-    '!': 123456
+    '.': 256,
+    ',': 2,
+    ';': 23,
+    ':': 25,
+    '–': 36,
+    '/': 34,
+    '1': 1,
+    '2': 12,
+    '3': 14,
+    '4': 145,
+    '5': 15,
+    '6': 124,
+    '7': 1245,
+    '8': 125,
+    '9': 24,
+    '0': 245,
+    '»': 6
+
 }
 
 def braille_to_svg(text):
@@ -55,7 +73,7 @@ def braille_to_svg(text):
     """
 
 
-    dwg = svgwrite.Drawing(text + '.svg', profile='tiny')
+    dwg = svgwrite.Drawing(text + '.svg', profile='full')
     multiplier = 10
     cell_size = 1.6 * multiplier
     cell_spacing = 2.5 * multiplier
@@ -63,9 +81,24 @@ def braille_to_svg(text):
     x_offset = cell_spacing
     y_offset = cell_spacing
 
+    # process the text first
+    # if there is a number, put a ž before it
+    # if there is a capital letter, put a @ before it
+
+    new_text = ""
+    for char in text:
+        if char.isdigit():
+            new_text += 'ž' + char
+        elif char.isupper():
+            new_text += '»' + char.lower()
+        else:
+            new_text += char
+    text = new_text
+
+    print(text)
+    
     
     for i, char in enumerate(text):
-        char = char.lower()
 
         #  get the value from the dict
         if(char in map):
