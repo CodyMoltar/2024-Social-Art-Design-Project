@@ -81,7 +81,7 @@ def braille_to_svg(text):
         filename = filename.replace('?', '')    
 
     dwg = svgwrite.Drawing(filename + '.svg', profile='full')
-    multiplier = 10
+    multiplier = 1
     cell_size = 1.6 * multiplier
     cell_spacing = 2.5 * multiplier
     letter_spacing = 6 * multiplier
