@@ -7,50 +7,50 @@ The character set is Latvian.
 2. Open a shell (terminal, command prompt, powershell) in the directory of the repository
 3. Check if python is installed, by running this command:
 
-    **Windows:**
+   **Windows:**
 
-    ```sh
-    python
-    ```
+   ```sh
+   python --version
+   ```
 
-    **MacOS:**
+   **MacOS:**
 
-    ```sh
-    python
-    ```
+   ```sh
+   python3 --version
+   ```
 
-    You should see something like:
+   You should see something like:
 
-    ```sh
-    python 3.10.4
-    ```
+   ```sh
+   python 3.10.4
+   ```
 
-    If you don't, download python from their website: [Python](https://www.python.org)
+   If you don't, download python from their website: [Python](https://www.python.org)
 
 4. Install the nesserary python package, by running this command:
 
-    **Windows:**
+   **Windows:**
 
-    ```sh
-    pip install svgwrite
-    ```
+   ```sh
+   pip install svgwrite
+   ```
 
-    **MacOS:**
+   **MacOS:**
 
-    ```sh
-    pip3 install svgwrite
-    ```
+   ```sh
+   pip3 install svgwrite
+   ```
 
 5. Now run the script: (replace the text within the quotes):
 
-    **Windows:**
+   **Windows:**
 
-    ```sh
-    python ./text_to_braille_SVG.py "Your text here"
-    ```
+   ```sh
+   python ./text_to_braille_SVG.py "Your text here"
+   ```
 
-    **MacOS:**
+   **MacOS:**
 
-    ```sh
-    python3 ./text_to_braille_SVG.py "Your text here"
-    ```
+   ```sh
+   python3 ./text_to_braille_SVG.py "Your text here"
+   ```
